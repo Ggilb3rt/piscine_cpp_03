@@ -5,7 +5,7 @@
 
 class ClapTrap
 {
-private:
+protected:
     std::string     _name;
     int             _hit_points;
     int             _energy_points;
@@ -17,7 +17,7 @@ public:
     ClapTrap( void );
     ClapTrap( std::string name );
     ClapTrap( ClapTrap const & src );
-    ~ClapTrap();
+    ~ClapTrap( void );
 
     ClapTrap & operator=( ClapTrap const & src );
 
@@ -28,6 +28,7 @@ public:
     int         getHitPoint( void ) const;
     int         getEnergyPoint( void ) const;
     int         getAttackDamage( void ) const;
+    void        print_infos( void ) const;
 };
 
 #endif

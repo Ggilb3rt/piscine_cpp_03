@@ -1,5 +1,6 @@
 #include <iostream>
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int main( void )
 {
@@ -21,4 +22,14 @@ int main( void )
     roger.attack("Pouet");
     roger.takeDamage(10);
     roger.attack("sdflk");
+
+    std::cout << std::endl << std::endl << "ScavTrap tests" << std::endl << std::endl;
+    ScavTrap    p0;
+    ScavTrap    p1("P1");
+
+
+    p1.ClapTrap::attack("wooo");
+    p1.attack("wooo");
+    p0.guardGate();
+    
 }

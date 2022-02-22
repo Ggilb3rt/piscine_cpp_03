@@ -62,12 +62,12 @@ bool     ClapTrap::can_play( void ) const
     return (true);
 }
 
-void    ClapTrap::attack( const std::string & targert)
+void    ClapTrap::attack( const std::string & target)
 {
     if (!this->can_play())
         return ;
     this->_energy_points--;
-    std::cout << "ClapTrap " << this->_name << " attacks " << targert;
+    std::cout << "ClapTrap " << this->_name << " attacks " << target;
     std::cout << " causing " << this->_attack_damage << " points of damage !" << std::endl;
     return ;
 }
@@ -113,3 +113,10 @@ int     ClapTrap::getAttackDamage( void ) const
     return (this->_attack_damage);
 }
 
+void    ClapTrap::print_infos( void ) const
+{
+    std::cout << this->_name << std::endl;
+    std::cout << "Hit points " << this->_hit_points << std::endl;
+    std::cout << "Energy points " << this->_energy_points << std::endl;
+    std::cout << "Attack damages " << this->_attack_damage << std::endl;
+}
