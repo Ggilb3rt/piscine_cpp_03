@@ -4,6 +4,9 @@
 ScavTrap::ScavTrap( void ) : ClapTrap("ScavNope")
 {
     std::cout << "Create ScavTrap " << ClapTrap::_name << std::endl;
+    this->ClapTrap::_hit_points = 100;
+    this->ClapTrap::_energy_points = 50;
+    this->ClapTrap::_attack_damage = 20;
     return ;
 }
 
@@ -13,13 +16,13 @@ ScavTrap::ScavTrap( std::string name) : ClapTrap(name)
     this->ClapTrap::_hit_points = 100;
     this->ClapTrap::_energy_points = 50;
     this->ClapTrap::_attack_damage = 20;
-    this->ClapTrap::print_infos();
     return ;
 }
 
-ScavTrap::ScavTrap( ScavTrap const & src)
+ScavTrap::ScavTrap( ScavTrap const & src) : ClapTrap(src.ClapTrap::getName())
 {
     *this = src;
+    std::cout << "Create ScavTrap from copy : " << this->_name << std::endl;
     return ;
 }
 
@@ -31,7 +34,13 @@ ScavTrap::~ScavTrap( void )
 
 ScavTrap &  ScavTrap::operator=( ScavTrap const & src)
 {
-    (void)src;
+    if (this != &src)
+    {
+        this->ClapTrap::_name = src.ClapTrap::getName();
+        this->ClapTrap::_hit_points = src.ClapTrap::getHitPoint();
+        this->ClapTrap::_energy_points = src.ClapTrap::getEnergyPoint();
+        this->ClapTrap::_attack_damage = src.ClapTrap::getAttackDamage();
+    }
     return *this;    
 }
 

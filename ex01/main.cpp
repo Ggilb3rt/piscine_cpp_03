@@ -26,10 +26,12 @@ int main( void )
     std::cout << std::endl << std::endl << "ScavTrap tests" << std::endl << std::endl;
     ScavTrap    p0;
     ScavTrap    p1("P1");
+    ScavTrap    p2(p1);
 
 
     p1.ClapTrap::attack("wooo");
     p1.attack("wooo");
     p0.guardGate();
+    p2.attack("real P1");
     
 }
