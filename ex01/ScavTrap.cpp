@@ -1,6 +1,7 @@
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 
+// Constructors / Destructor
 ScavTrap::ScavTrap( void ) : ClapTrap("ScavNope")
 {
     std::cout << "Create ScavTrap " << ClapTrap::_name << std::endl;
@@ -32,6 +33,7 @@ ScavTrap::~ScavTrap( void )
     return ;
 }
 
+// Overchage
 ScavTrap &  ScavTrap::operator=( ScavTrap const & src)
 {
     if (this != &src)
@@ -44,7 +46,7 @@ ScavTrap &  ScavTrap::operator=( ScavTrap const & src)
     return *this;    
 }
 
-
+// Member functions
 void    ScavTrap::attack( const std::string & target)
 {
      if (!this->ClapTrap::can_play())
@@ -57,6 +59,8 @@ void    ScavTrap::attack( const std::string & target)
 
 void    ScavTrap::guardGate( void ) const
 {
+    if (!this->ClapTrap::can_play())
+        return ;
     std::cout << this->ClapTrap::_name << " change to Gate keeper mode." << std::endl;
     return ;
 }

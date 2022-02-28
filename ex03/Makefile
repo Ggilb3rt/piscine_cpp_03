@@ -1,8 +1,8 @@
 #Coucou
 
-NAME = clapTrap
+NAME = diamondTrap
 FLAGS = -Wall -Wextra -Werror 
-STD = -std=c++98
+STD = -std=c++98 -Wshadow
 COMPIL = c++
 SRC = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
 OBJ = $(SRC:.cpp=.o)

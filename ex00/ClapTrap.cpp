@@ -2,7 +2,7 @@
 #include "ClapTrap.hpp"
 
 // Constructors / Destructor
-ClapTrap::ClapTrap( void ) : _name("nope"), _hit_points(10), _energy_points(10), _attack_damage(0) 
+ClapTrap::ClapTrap( void ) : _name("ClapNope"), _hit_points(10), _energy_points(10), _attack_damage(0) 
 {
     std::cout << "Create ClapTrap : " << this->_name << std::endl;
     return ;
@@ -62,12 +62,12 @@ bool     ClapTrap::can_play( void ) const
     return (true);
 }
 
-void    ClapTrap::attack( const std::string & targert)
+void    ClapTrap::attack( const std::string & target)
 {
     if (!this->can_play())
         return ;
     this->_energy_points--;
-    std::cout << "ClapTrap " << this->_name << " attacks " << targert;
+    std::cout << "ClapTrap " << this->_name << " attacks " << target;
     std::cout << " causing " << this->_attack_damage << " points of damage !" << std::endl;
     return ;
 }

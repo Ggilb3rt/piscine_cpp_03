@@ -115,8 +115,8 @@ int     ClapTrap::getAttackDamage( void ) const
 
 void    ClapTrap::print_infos( void ) const
 {
-    std::cout << this->_name << std::endl;
+    std::cout << std::endl << this->_name << std::endl;
     std::cout << "Hit points " << this->_hit_points << std::endl;
     std::cout << "Energy points " << this->_energy_points << std::endl;
-    std::cout << "Attack damages " << this->_attack_damage << std::endl;
+    std::cout << "Attack damages " << this->_attack_damage << std::endl << std::endl;
 }

@@ -2,7 +2,7 @@
 #include "ClapTrap.hpp"
 
 // Constructors / Destructor
-ClapTrap::ClapTrap( void ) : _name("nope"), _hit_points(10), _energy_points(10), _attack_damage(0) 
+ClapTrap::ClapTrap( void ) : _name("ClapNope"), _hit_points(10), _energy_points(10), _attack_damage(0) 
 {
     std::cout << "Create ClapTrap : " << this->_name << std::endl;
     return ;
@@ -115,8 +115,8 @@ int     ClapTrap::getAttackDamage( void ) const
 
 void    ClapTrap::print_infos( void ) const
 {
-    std::cout << this->_name << std::endl;
+    std::cout << std::endl << this->_name << std::endl;
     std::cout << "Hit points " << this->_hit_points << std::endl;
     std::cout << "Energy points " << this->_energy_points << std::endl;
-    std::cout << "Attack damages " << this->_attack_damage << std::endl;
+    std::cout << "Attack damages " << this->_attack_damage << std::endl << std::endl;
 }

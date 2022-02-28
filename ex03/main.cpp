@@ -8,16 +8,22 @@ int main( void )
 { 
     DiamondTrap     first("Carbon");
 
-
-    std::cout << "FragTrap infos" << std::endl;
-    first.FragTrap::print_infos();
-    std::cout << std::endl << "ScavTrap infos" << std::endl;
-    first.ScavTrap::print_infos();
-    std::cout << std::endl << "DiamondTrap infos" << std::endl;
+    std::cout << std::endl << "DiamondTrap infos";
     first.print_infos();
 
     std::cout << std::endl;
     first.guardGate();
     first.highFivesGuys();
     first.whoAmI();
+    first.attack("lol");
+    first.takeDamage(200);
+    first.attack("lol");
+    first.print_infos();
+
+    std::cout << std::endl;
+    DiamondTrap     noName;
+    noName.print_infos();
+
+    DiamondTrap     copy(first);
+    copy.print_infos();
 }

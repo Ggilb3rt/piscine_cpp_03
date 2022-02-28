@@ -28,10 +28,17 @@ int main( void )
     ScavTrap    p1("P1");
     ScavTrap    p2(p1);
 
+    p0.print_infos();
 
     p1.ClapTrap::attack("wooo");
     p1.attack("wooo");
+    p1.print_infos();
+
     p0.guardGate();
-    p2.attack("real P1");
     
+    p2.attack("real P1");
+    p2.takeDamage(20);
+    p2.print_infos();
+    
+    roger.print_infos();
 }

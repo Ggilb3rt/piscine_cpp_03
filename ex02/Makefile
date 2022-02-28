@@ -1,6 +1,6 @@
 #Coucou
 
-NAME = clapTrap
+NAME = fragTrap
 FLAGS = -Wall -Wextra -Werror 
 STD = -std=c++98
 COMPIL = c++

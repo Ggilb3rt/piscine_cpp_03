@@ -61,6 +61,8 @@ void    FragTrap::attack( const std::string & target)
 
 void    FragTrap::highFivesGuys( void ) const
 {
+    if (!this->ClapTrap::can_play())
+        return ;
     std::cout << this->ClapTrap::_name << " : \"High Fives Guys !\"" << std::endl;
     return ;
 }

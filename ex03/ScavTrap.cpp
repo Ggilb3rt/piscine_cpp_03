@@ -5,18 +5,18 @@
 ScavTrap::ScavTrap( void ) : ClapTrap("ScavNope")
 {
     std::cout << "Create ScavTrap " << ClapTrap::_name << std::endl;
-    this->ClapTrap::_hit_points = 100;
-    this->ClapTrap::_energy_points = 50;
-    this->ClapTrap::_attack_damage = 20;
+    this->ClapTrap::_hit_points = DEFAULT_HIT;
+    this->ClapTrap::_energy_points = DEFAULT_ENERGY;
+    this->ClapTrap::_attack_damage = DEFAULT_ATTACK;
     return ;
 }
 
 ScavTrap::ScavTrap( std::string name) : ClapTrap(name)
 {
     std::cout << "Create ScavTrap " << name << std::endl;
-    this->ClapTrap::_hit_points = 100;
-    this->ClapTrap::_energy_points = 50;
-    this->ClapTrap::_attack_damage = 20;
+    this->ClapTrap::_hit_points = DEFAULT_HIT;
+    this->ClapTrap::_energy_points = DEFAULT_ENERGY;
+    this->ClapTrap::_attack_damage = DEFAULT_ATTACK;
     return ;
 }
 
@@ -34,7 +34,7 @@ ScavTrap::~ScavTrap( void )
 }
 
 // Overchage
-ScavTrap &  ScavTrap::operator=( ScavTrap const & src)
+ScavTrap &  ScavTrap::operator=( ScavTrap const & src )
 {
     if (this != &src)
     {
@@ -59,6 +59,23 @@ void    ScavTrap::attack( const std::string & target)
 
 void    ScavTrap::guardGate( void ) const
 {
-    std::cout << this->_name << " change to Gate keeper mode." << std::endl;
+    if (!this->ClapTrap::can_play())
+        return ;
+    std::cout << this->ClapTrap::_name << " change to Gate keeper mode." << std::endl;
     return ;
+}
+
+void    ScavTrap::setDefaultHit( void )
+{
+    this->ClapTrap::_hit_points = DEFAULT_HIT;
+}
+
+void    ScavTrap::setDefaultEnergy( void )
+{
+    this->ClapTrap::_energy_points = DEFAULT_ENERGY;
+}
+
+void    ScavTrap::setDefaultAttack( void )
+{
+    this->ClapTrap::_energy_points = DEFAULT_ATTACK;
 }
