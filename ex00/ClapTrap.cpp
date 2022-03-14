@@ -32,7 +32,6 @@ ClapTrap::~ClapTrap()
 // Overload operators
 ClapTrap & ClapTrap::operator=( ClapTrap const & src)
 {
-
     if (this != &src)
     {
         this->_name = src._name;
@@ -53,9 +52,9 @@ bool     ClapTrap::can_play( void ) const
     {
         std::cout << this->_name << " can't play.";
         if (this->_energy_points <= 0)
-            std::cout << " He needs energy (" << this->_energy_points << ").";
+            std::cout << " It needs energy (" << this->_energy_points << ").";
         if (this->_hit_points <= 0)
-            std::cout << " He needs reparation (" << this->_hit_points << ").";
+            std::cout << " It needs reparation (" << this->_hit_points << ").";
         std::cout << std::endl;
         return (false);
     }

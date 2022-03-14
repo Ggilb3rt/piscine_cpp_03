@@ -14,9 +14,9 @@ ScavTrap::ScavTrap( void ) : ClapTrap("ScavNope")
 ScavTrap::ScavTrap( std::string name) : ClapTrap(name)
 {
     std::cout << "Create ScavTrap " << name << std::endl;
-    this->ClapTrap::_hit_points = 100;
-    this->ClapTrap::_energy_points = 50;
-    this->ClapTrap::_attack_damage = 20;
+    this->_hit_points = 100;
+    this->_energy_points = 50;
+    this->_attack_damage = 20;
     return ;
 }
 

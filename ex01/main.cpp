@@ -23,9 +23,12 @@ int main( void )
     roger.takeDamage(10);
     roger.attack("sdflk");
 
+
+
     std::cout << std::endl << std::endl << "ScavTrap tests" << std::endl << std::endl;
+    
     ScavTrap    p0;
-    ScavTrap    p1("P1");
+    ScavTrap    p1("Martine");
     ScavTrap    p2(p1);
 
     p0.print_infos();
@@ -36,7 +39,7 @@ int main( void )
 
     p0.guardGate();
     
-    p2.attack("real P1");
+    p2.attack("real Martine");
     p2.takeDamage(20);
     p2.print_infos();
     

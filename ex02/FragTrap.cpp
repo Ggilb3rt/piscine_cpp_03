@@ -14,9 +14,9 @@ FragTrap::FragTrap( void ) : ClapTrap("FragNope")
 FragTrap::FragTrap( std::string name) : ClapTrap(name)
 {
     std::cout << "Create FragTrap " << name << std::endl;
-    this->ClapTrap::_hit_points = 100;
-    this->ClapTrap::_energy_points = 100;
-    this->ClapTrap::_attack_damage = 30;
+    this->_hit_points = 100;
+    this->_energy_points = 100;
+    this->_attack_damage = 30;
     return ;
 }
 
