@@ -10,6 +10,7 @@ int main( void )
     FragTrap    f1("F1");
 
     f0.highFivesGuys();
+    // f0.guardGate(); // can't compile
     f1.attack("a chicken");
     f1.print_infos();
     

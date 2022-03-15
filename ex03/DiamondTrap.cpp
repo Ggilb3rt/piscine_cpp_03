@@ -5,7 +5,7 @@
 const std::string suffixe = "_clap_name";
 
 // Constructors / Destructor
-DiamondTrap::DiamondTrap( void ) : ClapTrap(suffixe), ScavTrap(), FragTrap(), _name("DiamondNope")
+DiamondTrap::DiamondTrap( void ) : ClapTrap(std::string("Default") + suffixe), ScavTrap(), FragTrap(), _name("DiamondNope")
 {
     std::cout << "Create DiamondTrap " << this->_name << std::endl;
     this->ScavTrap::setDefaultEnergy();
